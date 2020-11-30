@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "d419b52e-8d3d-48b2-9fc6-1550fed01467",
+		"name": "demo-postmand",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postman",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get customer details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demo/customer/accounts/CUSTOMER0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"customer",
+						"accounts",
+						"CUSTOMER0001"
+					]
+				},
+				"description": "Get customer details"
+			},
+			"response": []
+		},
+		{
+			"name": "Create new account for existing customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerID\" : \"CUSTOMER0001\",\r\n    \"initialCredit\" : \"3\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/accounts/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"accounts",
+						"current"
+					]
+				},
+				"description": "Create new account for existing customer"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
